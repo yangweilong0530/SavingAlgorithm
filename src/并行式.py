@@ -56,24 +56,6 @@ def linkfind(carline,point1,point2):
         return -1,point2,point1
 
 
-def draw_path(car_routes,CityCoordinates):
-    '''
-    #画路径图
-    输入：line-路径，CityCoordinates-城市坐标；
-    输出：路径图
-    '''
-    for route in car_routes:
-        x,y= [],[]
-        for i in route:
-            Coordinate = CityCoordinates[i]
-            x.append(Coordinate[0])
-            y.append(Coordinate[1])
-        x.append(x[0])
-        y.append(y[0])
-        plt.plot(x, y,'o-', alpha=0.8, linewidth=0.8)
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.show()
 
 
 if __name__ == '__main__':
@@ -138,4 +120,3 @@ if __name__ == '__main__':
         i.append(0)
         i.insert(0,0)
 
-    draw_path(carLines,points)#画路径图
